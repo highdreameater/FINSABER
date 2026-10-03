@@ -15,7 +15,7 @@ Replace or supplement Sharpe with **Calmar Ratio** (AR / MDD) and **Omega Ratio*
 
 $$\text{Calmar} = \frac{\text{Annualised Return}}{\text{Maximum Drawdown}}$$
 
-- Already available: `annual_return` and `max_drawdown` are computed in `_analyze_results()` ([finsaber_bt.py:320-327](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/finsaber_bt.py#L320-L327))
+- Already available: `annual_return` and `max_drawdown` are computed in `_analyze_results()` ([finsaber_bt.py:320-327](../backtest/finsaber_bt.py#L320-L327))
 - Simple division — no new data needed
 - Penalises strategies with high drawdowns (LLM strategies in bear markets)
 
@@ -50,7 +50,7 @@ The paper's central finding is that LLM strategies have **asymmetric risk**: the
 
 ## 4. Proposed Changes
 
-### [MODIFY] [metrics.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/metrics.py)
+### [MODIFY] [metrics.py](../backtest/toolkit/metrics.py)
 
 Add two new functions:
 
@@ -71,7 +71,7 @@ def calculate_omega_ratio(daily_returns, threshold=0.0):
     return gains / losses
 ```
 
-### [MODIFY] [finsaber_bt.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/finsaber_bt.py)
+### [MODIFY] [finsaber_bt.py](../backtest/finsaber_bt.py)
 
 **`_calculate_annualized_metrics()` (line 330-382):**
 - Compute `calmar_ratio` from existing `annual_return` and `max_drawdown`
@@ -83,7 +83,7 @@ def calculate_omega_ratio(daily_returns, threshold=0.0):
 - Add `calmar_ratio` and `omega_ratio` to the returned eval_metrics dict (line 320-327)
 - Add print lines for the new metrics (line 300-305)
 
-### [MODIFY] [operation_utils.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/operation_utils.py)
+### [MODIFY] [operation_utils.py](../backtest/toolkit/operation_utils.py)
 
 **`aggregate_results_one_strategy()` (line 495-614):**
 - Add `calmar_ratio` and `omega_ratio` columns to `results_df_by_tickers` (line 512-514)

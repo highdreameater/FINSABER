@@ -100,7 +100,7 @@ Financial News + Price Data + Filings
 
 ## 5. Proposed Changes
 
-### [NEW] [regime_signal.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/regime_signal.py)
+### [NEW] [regime_signal.py](../backtest/toolkit/regime_signal.py)
 
 Module to generate regime context strings from market data:
 
@@ -220,7 +220,7 @@ decide whether to BUY, SELL, or HOLD...
 llm_traders/finagent/  ← similar prompt construction
 ```
 
-### [NEW] [run_regime_prompt_experiment.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/run_regime_prompt_experiment.py)
+### [NEW] [run_regime_prompt_experiment.py](../backtest/run_regime_prompt_experiment.py)
 
 Experiment runner that compares:
 1. Baseline LLM strategy (no regime context)

@@ -59,7 +59,7 @@ RCS solves all three. It's a novel metric contribution that is directly publisha
 
 ## 4. Proposed Changes
 
-### [NEW] [rcs.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/rcs.py)
+### [NEW] [rcs.py](../backtest/toolkit/rcs.py)
 
 New module dedicated to Regime-Conditional Sharpe computation:
 
@@ -142,7 +142,7 @@ def compute_rcs_from_results(results_dir: str, spx_path: str) -> dict:
     return compute_rcs(sharpe_records, weights)
 ```
 
-### [NEW] [run_rcs_analysis.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/run_rcs_analysis.py)
+### [NEW] [run_rcs_analysis.py](../backtest/run_rcs_analysis.py)
 
 Standalone script to compute and display RCS from existing results:
 
@@ -167,7 +167,7 @@ for strategy, score in sorted(rcs_scores.items(), key=lambda x: x[1], reverse=Tr
     print(f"  {strategy:<25} RCS = {score:+.4f}")
 ```
 
-### [MODIFY] [operation_utils.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/operation_utils.py)
+### [MODIFY] [operation_utils.py](../backtest/toolkit/operation_utils.py)
 
 Add optional RCS column to results CSV when regime data is available.
 

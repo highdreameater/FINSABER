@@ -59,7 +59,7 @@ PSR and MinTRL turn these arguments into **quantitative proofs**:
 
 ## 4. Proposed Changes
 
-### [NEW] [psr.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/psr.py)
+### [NEW] [psr.py](../backtest/toolkit/psr.py)
 
 Core PSR/MinTRL computation module:
 
@@ -175,7 +175,7 @@ def compute_psr_from_returns(
     }
 ```
 
-### [NEW] [run_psr_analysis.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/run_psr_analysis.py)
+### [NEW] [run_psr_analysis.py](../backtest/run_psr_analysis.py)
 
 Standalone script that loads existing pickle results and computes PSR/MinTRL:
 
@@ -192,7 +192,7 @@ Usage: python backtest/run_psr_analysis.py --setup cherry_pick_both_finmem
 # Outputs a comparison table
 ```
 
-### [MODIFY] [finsaber_bt.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/finsaber_bt.py)
+### [MODIFY] [finsaber_bt.py](../backtest/finsaber_bt.py)
 
 **`_calculate_annualized_metrics()` (line 330-382):**
 - After computing `daily_returns`, call `compute_psr_from_returns(daily_returns)`
@@ -202,7 +202,7 @@ Usage: python backtest/run_psr_analysis.py --setup cherry_pick_both_finmem
 - Add `psr` and `min_trl_years` to eval_metrics dict
 - Print: `f"PSR (vs Sharpe=0): {psr:.4f}, Min Track Record: {min_trl_years:.1f} years"`
 
-### [MODIFY] [operation_utils.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/toolkit/operation_utils.py)
+### [MODIFY] [operation_utils.py](../backtest/toolkit/operation_utils.py)
 
 - Add `psr` and `min_trl_years` columns to results CSV (same pattern as other metrics)
 

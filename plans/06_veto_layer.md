@@ -12,7 +12,7 @@ ARIMA runs in **Backtrader** (`bt.Strategy`), while FinMem/FinAgent run in the *
 
 ## Proposed Changes
 
-### [NEW] [veto_layer.py](file:///home/rishang/Desktop/FINSABER/FINSABER/backtest/toolkit/veto_layer.py)
+### [NEW] [veto_layer.py](../backtest/toolkit/veto_layer.py)
 
 Core logic module containing:
 
@@ -30,7 +30,7 @@ Core logic module containing:
 
 ---
 
-### [NEW] [run_veto_experiment.py](file:///home/rishang/Desktop/FINSABER/FINSABER/backtest/run_veto_experiment.py)
+### [NEW] [run_veto_experiment.py](../backtest/run_veto_experiment.py)
 
 Experiment runner that:
 

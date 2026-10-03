@@ -61,7 +61,7 @@ Expected outcome:
 
 ## 4. Proposed Changes
 
-### [NEW] [risk_overlay.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/strategy/timing/risk_overlay.py)
+### [NEW] [risk_overlay.py](../backtest/strategy/timing/risk_overlay.py)
 
 A **wrapper strategy** that delegates trading signals to an inner strategy but controls position sizing:
 
@@ -178,7 +178,7 @@ def apply_risk_overlay_posthoc(equity_curve: pd.Series,
 
 > **Recommendation**: Start with the post-hoc approach (much faster to implement, ~10h). It can be applied to ALL existing results without re-running any backtests. Then optionally build the full strategy wrapper for live use.
 
-### [NEW] [run_risk_overlay_analysis.py](file:///c:/Users/mhtgt/OneDrive/Desktop/FINSABER/FINSABER/backtest/run_risk_overlay_analysis.py)
+### [NEW] [run_risk_overlay_analysis.py](../backtest/run_risk_overlay_analysis.py)
 
 Loads existing `.pkl` results, applies the post-hoc risk overlay, and compares before/after metrics.
 

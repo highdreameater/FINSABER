@@ -9,7 +9,7 @@ sleep 2
 echo "Starting full Ollama experiments..."
 
 # Navigate to repo
-cd /home/rishang/Desktop/FINSABER/FINSABER
+cd "$(dirname "$0")"
 
 # Run full experiments with qwen
 export QT_QPA_PLATFORM=offscreen
